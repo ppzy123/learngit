@@ -12,7 +12,6 @@ public class WordCount {
         Lib wc=new Lib();
         wc.SetPath("output.txt","input.txt");
         wc.Open();
-        wc.Read();
         wc.charsNumberCount();
         wc.wordsNumberCount();
         wc.linesNumberCount();
