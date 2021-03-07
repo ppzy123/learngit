@@ -14,11 +14,13 @@ public class Lib {
     boolean operable=false;
     HashMap<String,Integer> map = new HashMap<>();
     List<Map.Entry<String,Integer>> list;
+
     public void SetPath(String out,String in)
     {
         readPath=out;
         writePath=in;
     }
+
     public void Open() throws IOException
     {
         operable=true;
@@ -46,6 +48,7 @@ public class Lib {
             System.out.println("文件打开成功！");
         }
     }
+
     public void Read() throws IOException
     {
         int flag;
@@ -53,6 +56,7 @@ public class Lib {
             str.append((char) flag);
         }
     }
+
     public void charsNumberCount()
     {
         charNum=0;
@@ -63,6 +67,7 @@ public class Lib {
             }
         }
     }
+
     public void linesNumberCount() throws IOException
     {
         reader = new BufferedReader(new FileReader(readFile));
@@ -75,6 +80,7 @@ public class Lib {
             }
         }
     }
+
     public void wordsNumberCount() throws IOException
     {
         reader = new BufferedReader(new FileReader(readFile));
@@ -100,6 +106,7 @@ public class Lib {
                 }
         }
     }
+
     public void wordSort()
     {
         int i=0;
@@ -118,6 +125,7 @@ public class Lib {
             }
         });
     }
+
     public void show()
     {
         int i=0;
@@ -130,6 +138,7 @@ public class Lib {
         System.out.println(lineNum);
         System.out.println(wordNum);
     }
+
     public void write() throws IOException
     {
         int i=0;
