@@ -49,17 +49,14 @@ public class Lib {
         }
     }
 
-    public void Read() throws IOException//将缓冲流内容读取到str
+    public void charsNumberCount() throws IOException//字符计算
     {
+        charNum=0;
+        reader = new BufferedReader(new FileReader(readFile));
         int flag;
         while ((flag = reader.read()) != -1) {
             str.append((char) flag);
         }
-    }
-
-    public void charsNumberCount()//字符计算
-    {
-        charNum=0;
         char[] ch = str.toString().toCharArray();
         for(int i = 0; i < ch.length; i++) {
             if(ch[i] >= 0 && ch[i] <= 127) {
@@ -90,20 +87,20 @@ public class Lib {
             for (int i=0;i<line.length();i++) {
                 line=line.toLowerCase();
             }
-                String[] str=line.split(" ");
-                for(int i=0;i<str.length;i++)
+            String[] str=line.split(" ");
+            for(int i=0;i<str.length;i++)
+            {
+                if(str[i].length()>3&&str[i].charAt(0)>'9'&&str[i].charAt(0)>'0')
                 {
-                    if(str[i].length()>3&&str[i].charAt(0)>'9'&&str[i].charAt(0)>'0')
-                    {
-                        wordNum++;
-                        if(map.get(str[i])==null){
-                            map.put(str[i],1);
-                        }
-                        else{
-                            map.put(str[i],map.get(str[i])+1);
-                        }
+                    wordNum++;
+                    if(map.get(str[i])==null){
+                        map.put(str[i],1);
+                    }
+                    else{
+                        map.put(str[i],map.get(str[i])+1);
                     }
                 }
+            }
         }
     }
 
