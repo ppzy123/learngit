@@ -43,7 +43,7 @@ public class Lib {
         }
         if(operable) {
             reader = new BufferedReader(new FileReader(readFile));
-            writer = new BufferedWriter(new FileWriter(writeFile));
+           
             str=new StringBuilder();
             System.out.println("文件打开成功！");
         }
@@ -138,6 +138,7 @@ public class Lib {
 
     public void write() throws IOException//写入文件
     {
+        writer = new BufferedWriter(new FileWriter(writeFile));
         int i=0;
         String s="";
         s+="characters:"+charNum+"\n";
