@@ -15,13 +15,13 @@ public class Lib {
     HashMap<String,Integer> map = new HashMap<>();
     List<Map.Entry<String,Integer>> list;
 
-    public void SetPath(String out,String in)//设置文件地址
+    public void setPath(String out,String in)//设置文件地址
     {
         readPath=out;
         writePath=in;
     }
 
-    public void Open() throws IOException//打开文件并开启缓冲流
+    public void open() throws IOException//打开文件并开启缓冲流
     {
         operable=true;
         readFile=new File(readPath);
