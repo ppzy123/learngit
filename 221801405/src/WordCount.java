@@ -8,6 +8,7 @@ public class WordCount {
         /*Scanner input=new Scanner(System.in);
         inPath=input.next();
         outPath=input.next();*/
+        //将上面的注释去掉改为控制台输入，不然直接运行无需输入
         Lib wc=new Lib();
         wc.SetPath("output.txt","input.txt");
         wc.Open();
