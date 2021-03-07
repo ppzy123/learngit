@@ -42,8 +42,6 @@ public class Lib {
             }
         }
         if(operable) {
-            reader = new BufferedReader(new FileReader(readFile));
-           
             str=new StringBuilder();
             System.out.println("文件打开成功！");
         }
