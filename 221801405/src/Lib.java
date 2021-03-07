@@ -15,13 +15,13 @@ public class Lib {
     HashMap<String,Integer> map = new HashMap<>();
     List<Map.Entry<String,Integer>> list;
 
-    public void SetPath(String out,String in)
+    public void SetPath(String out,String in)//设置文件地址
     {
         readPath=out;
         writePath=in;
     }
 
-    public void Open() throws IOException
+    public void Open() throws IOException//打开文件并开启缓冲流
     {
         operable=true;
         readFile=new File(readPath);
@@ -49,7 +49,7 @@ public class Lib {
         }
     }
 
-    public void Read() throws IOException
+    public void Read() throws IOException//将缓冲流内容读取到str
     {
         int flag;
         while ((flag = reader.read()) != -1) {
@@ -57,7 +57,7 @@ public class Lib {
         }
     }
 
-    public void charsNumberCount()
+    public void charsNumberCount()//字符计算
     {
         charNum=0;
         char[] ch = str.toString().toCharArray();
@@ -68,7 +68,7 @@ public class Lib {
         }
     }
 
-    public void linesNumberCount() throws IOException
+    public void linesNumberCount() throws IOException//行数计算
     {
         reader = new BufferedReader(new FileReader(readFile));
         String line;
@@ -81,7 +81,7 @@ public class Lib {
         }
     }
 
-    public void wordsNumberCount() throws IOException
+    public void wordsNumberCount() throws IOException//单词数计算
     {
         reader = new BufferedReader(new FileReader(readFile));
         String line;
@@ -107,7 +107,7 @@ public class Lib {
         }
     }
 
-    public void wordSort()
+    public void wordSort()//排序
     {
         int i=0;
         list = new ArrayList<Map.Entry<String,Integer>>((Collection<? extends Map.Entry<String, Integer>>) map.entrySet());
@@ -126,7 +126,7 @@ public class Lib {
         });
     }
 
-    public void show()
+    public void show()//用于控制台输出
     {
         int i=0;
         for(Map.Entry<String,Integer> mapping:list){
@@ -139,7 +139,7 @@ public class Lib {
         System.out.println(wordNum);
     }
 
-    public void write() throws IOException
+    public void write() throws IOException//写入文件
     {
         int i=0;
         String s="";
